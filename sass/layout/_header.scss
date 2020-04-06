@@ -1,0 +1,31 @@
+.header{
+	height: 95vh;
+	background-image:linear-gradient(
+		to right bottom,
+			rgba($color-primary-light,0.8),
+		rgba($color-primary-dark,0.8)) ,
+		 url(prem3.jpg);
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	-webkit-clip-path: polygon(0 0,100% 0,100% 75vh,0 100%); 
+	clip-path: polygon(0 0,100% 0,100% 75vh,0 100%); 
+
+}
+.logo{
+	height: 10rem;
+	&-box{ 
+		    
+			position: absolute;
+			top: 40px;
+			left: 40px;
+			animation: animate;
+			filter: blur(0px) hue-rotate(20%);
+			
+	&:hover{
+		animation: animate .2s linear infinite;;
+
+	}
+			
+	}
+}

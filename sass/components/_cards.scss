@@ -1,0 +1,145 @@
+.card{
+
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 35rem;
+
+    &_side{
+        
+        height: 35rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
+
+
+
+        &--front{
+           background-color:$color-white;
+
+        }
+       &--back{
+         background-color: green;
+         transform: rotateY(180deg);
+    
+          
+         &-1{
+             background-image: linear-gradient(to right bottom,#ff99e6,$instagram-color-2);
+
+         }
+         &-2{
+            background-image: linear-gradient(to right bottom,#9999ff,#1a1aff);
+
+        }
+        &-3{
+            background-image: linear-gradient(to right bottom,#ff9999,#ff0000);
+
+        }
+       }
+    }
+   
+    
+    &:hover &_side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &_side--back{
+        transform: rotateY(0deg);
+    }
+
+
+&_picture{
+    background-size: cover;
+    background-position-x: -4rem;
+    height: 20rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0,100% 85%, 0 100%);
+    
+     &-1{
+         background-image:linear-gradient(to right bottom,$instagram-color-1,$instagram-color-2),
+         url(insta.jpg);
+     }
+     &-2{
+        background-image:linear-gradient(to right bottom,#1a1aff,#6666ff),
+        url(fb.jpg);
+     }
+     &-3{
+        background-image:
+        url(youtube.jpg);
+     }
+}
+
+
+ &_heading{
+     font-size: 1.5rem;
+     font-weight: 500;
+     text-transform: uppercase;
+     text-align: right;
+     color: $color-white;
+     position: absolute;
+     top: 14.5rem;
+    right: 3rem;
+
+ }
+ &_heading-span{
+
+    &-1{
+        background-image: linear-gradient(to right bottom, 
+        rgba($instagram-color-1,.85),
+        rgba($instagram-color-2,.85));
+    }
+ }
+
+   &_details{
+   
+       ul{
+        list-style-type:none;
+        width: 80%;
+        margin: 0 auto;
+       }
+      li{
+          text-align: center;
+          font-size: 1.5rem;
+          padding: 1rem;
+        //   margin-left: 3.5rem;
+          &:not(:last-child){
+              border-bottom: 1px solid grey;
+          }
+         
+      }
+
+   }
+
+   //backcard
+   &_cta{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       width: 90%;
+       text-align: center;
+   }
+   &_follow{
+       text-align: center;
+       margin-bottom: 3rem;
+       color: $color-white;
+
+   }
+   &_follow-only{
+       font-size: 1.4rem;
+       text-transform: uppercase;
+
+   }
+   &_follow-now{
+       font-size: 6rem;
+       font-weight: 100;
+
+   }
+
+}
